@@ -2,10 +2,13 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: ['./src/index.js'],
+  entry: {
+    index: './src/index.js',
+    polyfills: ['babel-polyfill'],
+  },
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'index.js',
+    filename: '[name].js',
   },
   performance: {
     hints: "warning"
