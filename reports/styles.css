@@ -1,0 +1,50 @@
+#app, #explain {
+    padding: 2em;
+}
+
+body {
+     background: linear-gradient(to left, #F7971E , #FFD200);
+     font-family: avenir, helvetica, roboto, arial, sans-serif;
+     font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: #009688;
+}
+
+button, button:visited {
+  background: transparent;
+  margin-right: 10px;
+  border-radius: 0.25em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  cursor: pointer;
+  color: #111;
+  display: inline-block;
+  font-family: avenir, helvetica, roboto, arial, sans-serif;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  displayf
+  transition: color 0.4s, background-color 0.4s, border 0.4s; }
+
+button:hover, button:focus {
+  color: #009688;
+  border: 1px solid #009688;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; }
+
+button:active {
+  color: #0074D9;
+  border: 1px solid #0074D9;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; }
+
+.ReactModal__Content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
