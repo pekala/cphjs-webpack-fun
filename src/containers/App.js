@@ -1,8 +1,10 @@
 import React, { PropTypes } from 'react'
-import Calendar from '../components/Calendar'
+import componentProxy from './Proxy';
 import Counter from '../components/Counter'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
+const Calendar = componentProxy(() => import('../components/Calendar'));
 
 import {
   increment, incrementIfOdd, incrementAsync, decrement, toggleCalendar
@@ -19,7 +21,7 @@ const App = ({
 }) => (
     <div>
         <Counter {...{ increment, incrementIfOdd, incrementAsync, decrement, counter, toggleCalendar }}/>
-        <Calendar isOpen={isCalendarOpen} toggleCalendar={toggleCalendar}/>
+        { isCalendarOpen && <Calendar isOpen={isCalendarOpen} toggleCalendar={toggleCalendar}/> }
     </div>
 )
 
