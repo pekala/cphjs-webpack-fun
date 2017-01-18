@@ -13,6 +13,9 @@ module.exports = {
   performance: {
     hints: "warning"
   },
+  plugins: [
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/)
+  ],
   module: {
     rules: [
       {
