@@ -22,7 +22,7 @@ if (window.Promise && window.fetch && Object.assign) {
 } else {
     const script = document.createElement('script');
     script.async = true;
-    script.src = '/polyfills.js';
+    script.src = './polyfills.js';
     script.onload = function() {
         main();
     };
