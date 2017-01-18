@@ -26,8 +26,10 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
-        include: path.join(__dirname, 'src'),
+        include: [
+          path.join(__dirname, 'src'),
+          path.resolve('node_modules/preact-compat/src'),
+        ],
       }
     ]
   }
