@@ -4,7 +4,9 @@ import Counter from '../components/Counter'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import * as Actions from '../actions'
+import {
+  increment, incrementIfOdd, incrementAsync, decrement, toggleCalendar
+} from '../actions'
 
 const App = ({
     isCalendarOpen,
@@ -27,7 +29,7 @@ const mapStateToProps = (state) => ({
 })
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(Actions, dispatch)
+  return bindActionCreators({ increment, incrementIfOdd, incrementAsync, decrement, toggleCalendar }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)

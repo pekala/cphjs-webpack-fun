@@ -7,26 +7,22 @@ module.exports = {
     path: path.join(__dirname, 'public'),
     filename: 'index.js',
   },
+  performance: {
+    hints: "warning"
+  },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader',
+        loaders: ['style-loader', 'css-loader'],
         include: __dirname,
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/,
         include: path.join(__dirname, 'src'),
       }
     ]
-  },
-  plugins: [
-    new webpack.DefinePlugin({
-        'process.env': {
-            'NODE_ENV': JSON.stringify('production'),
-        }
-    })
-  ]
+  }
 }
